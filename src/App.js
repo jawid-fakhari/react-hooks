@@ -12,6 +12,8 @@ function App() {
 
   //** class component: passare inital value attraverso un function*/
   const [count, setCount] = useState(() => {return 4});
+  const [color, setColor] = useState(() => {return "blue"});
+  
   // la funzione onclick del button
   function decrementCount() {
     //funzione del hook useState che prende il valore corrente e diminuisce di 1
@@ -28,6 +30,7 @@ function App() {
     <>
       <button onClick={decrementCount}>-</button>
       <span>{count}</span>
+      <span>{color}</span>
       <button onClick={incrementCount}>+</button>
     </>
   );
